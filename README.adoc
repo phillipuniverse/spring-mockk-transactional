@@ -1,0 +1,12 @@
+Demo project with a failing test for https://github.com/Ninja-Squad/springmockk/issues/63.
+
+To reproduce the issue, run the entire `DemoApplicationTests` class to run both methods, the `realMethod` test will fail with the following error because the spy was not reset.
+
+[source]
+----
+expected: "original"
+but was : "override"
+org.opentest4j.AssertionFailedError:
+expected: "original"
+but was : "override"
+----
